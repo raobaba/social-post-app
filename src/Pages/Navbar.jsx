@@ -1,41 +1,58 @@
 import React from 'react'
 import { AppBar, Toolbar, styled, Typography } from "@mui/material";
 import { Link } from 'react-router-dom';
+import Search from './../Components/Search';
 
 const StyledHeader = styled(AppBar)`
     background:#2874f2;
-    height: 55px; 
+    height: 65px; 
 `
 const StyledLink = styled(Link)`
     color: wheat;
     text-decoration: none;
-    margin-right: 12%;
+    font-size: 23px;
+    font-family: 600;
  `
- const Container = styled(Toolbar)`
+const Container = styled(Toolbar)`
      display: flex;
      justify-content: space-around;
  `
+const Image = styled('img')({
+    width: '55px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    marginTop: '5px'
+});
+
 export default function Navbar() {
     return (
         <StyledHeader position="static">
             <Container>
                 <Typography>
-                    <StyledLink>TotalPost</StyledLink>
+                    <StyledLink to={'/'}>
+                        <Image src={'https://png.pngtree.com/png-vector/20190328/ourmid/pngtree-green-recycling-logo-png-image_881104.jpg'} alt="logo" />
+                    </StyledLink>
                 </Typography>
                 <Typography>
-                    <StyledLink>TotalUser</StyledLink>
+                    <Search />
                 </Typography>
                 <Typography>
-                    <StyledLink>AllPosts</StyledLink>
+                    <StyledLink to={'/'}>TotalPost</StyledLink>
                 </Typography>
                 <Typography>
-                    <StyledLink>AllUsers</StyledLink>
+                    <StyledLink to={'/totalUsers'}>TotalUser</StyledLink>
                 </Typography>
                 <Typography>
-                    <StyledLink>PostForm</StyledLink>
+                    <StyledLink to={'/allPosts'}>CreatePost</StyledLink>
                 </Typography>
                 <Typography>
-                    <StyledLink>UserForm</StyledLink>
+                    <StyledLink to={'/allUsers'}>User</StyledLink>
+                </Typography>
+                <Typography>
+                    <StyledLink to={'/postForm'}>Post</StyledLink>
+                </Typography>
+                <Typography>
+                    <StyledLink to={'/userForm'}>Profile</StyledLink>
                 </Typography>
             </Container>
         </StyledHeader>
