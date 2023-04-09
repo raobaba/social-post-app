@@ -1,7 +1,8 @@
 import React from 'react'
-import { AppBar, Toolbar, styled, Typography } from "@mui/material";
+import { AppBar, Toolbar, styled } from "@mui/material";
 import { Link } from 'react-router-dom';
 import Search from './../Components/Search';
+import Header from './Header';
 
 const StyledHeader = styled(AppBar)`
     background:#2874f2;
@@ -28,32 +29,11 @@ export default function Navbar() {
     return (
         <StyledHeader position="static">
             <Container>
-                <Typography>
-                    <StyledLink to={'/'}>
+                    <StyledLink style={{position:'static'}} to={'/'}>
                         <Image src={'https://png.pngtree.com/png-vector/20190328/ourmid/pngtree-green-recycling-logo-png-image_881104.jpg'} alt="logo" />
                     </StyledLink>
-                </Typography>
-                <Typography>
                     <Search />
-                </Typography>
-                <Typography>
-                    <StyledLink to={'/'}>TotalPost</StyledLink>
-                </Typography>
-                <Typography>
-                    <StyledLink to={'/totalUsers'}>TotalUser</StyledLink>
-                </Typography>
-                <Typography>
-                    <StyledLink to={'/allPosts'}>CreatePost</StyledLink>
-                </Typography>
-                <Typography>
-                    <StyledLink to={'/allUsers'}>User</StyledLink>
-                </Typography>
-                <Typography>
-                    <StyledLink to={'/postForm'}>Post</StyledLink>
-                </Typography>
-                <Typography>
-                    <StyledLink to={'/userForm'}>Profile</StyledLink>
-                </Typography>
+                   <Header />
             </Container>
         </StyledHeader>
     )

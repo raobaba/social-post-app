@@ -8,6 +8,7 @@ const SearchContainer = styled(Box)`
   width: 200px;
   background-color: #fff;
   display: flex;
+  position: static;
 `;
 const InputSearchBase = styled(InputBase)`
   font-size: unset;
@@ -29,7 +30,6 @@ export default function Search() {
             <SearchIconWrapper>
                 <SearchIcon />
             </SearchIconWrapper>
-           
         </SearchContainer>
     )
 }
