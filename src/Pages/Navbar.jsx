@@ -2,7 +2,7 @@ import React from 'react'
 import { AppBar, Toolbar, styled } from "@mui/material";
 import { Link } from 'react-router-dom';
 import Search from './../Components/Search';
-import Header from './Header';
+import Header from './Button';
 
 const StyledHeader = styled(AppBar)`
     background:#2874f2;
